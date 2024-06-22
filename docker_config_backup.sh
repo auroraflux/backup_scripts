@@ -11,6 +11,8 @@ TELEGRAM_TOKEN=""              # Telegram Bot API token
 TELEGRAM_CHAT_ID=""            # Telegram Chat ID to send messages to
 MAX_SIZE_GB=6                  # Maximum allowed backup size in GB
 UPLOAD_SPEED_MBPS=125          # Upload speed in Mbps (default is 1 Gbps = 125 MB/s)
+TIMEZONE="America/Los_Angeles" # Timezone for date display (e.g., "America/New_York", "Europe/London")
+
 
 # Script variables (do not modify)
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
@@ -159,7 +161,7 @@ if $SIMULATE; then
 
 <b>📄 Filename:</b> <code>${BACKUP_FILE}</code>
 <b>📊 Simulated Size:</b> <code>${TOTAL_SIZE}</code>
-<b>🕒 Date:</b> <code>$(TZ='America/Los_Angeles' date '+%Y-%m-%d %I:%M:%S %p PST')</code>
+<b>🕒 Date:</b> <code>$(TZ="$TIMEZONE" date '+%Y-%m-%d %I:%M:%S %p %Z')</code>
 
 <b>Directories to be backed up:</b>
 ${DIR_SIZES}"
