@@ -41,6 +41,7 @@ Before you begin, ensure you have met the following requirements:
    TELEGRAM_CHAT_ID=""            # Telegram Chat ID to send messages to
    MAX_SIZE_GB=6                  # Maximum allowed backup size in GB
    UPLOAD_SPEED_MBPS=125          # Upload speed in Mbps (default is 1 Gbps = 125 MB/s)
+   TIMEZONE="America/Los_Angeles" # Timezone for date display (e.g., "America/New_York", "Europe/London")
    ```
 
 ## Usage
@@ -68,6 +69,8 @@ You can customize the script by modifying the variables at the top of the file:
 - `TELEGRAM_CHAT_ID`: The Chat ID where you want to receive Telegram notifications.
 - `MAX_SIZE_GB`: The maximum allowed size for the backup in GB.
 - `UPLOAD_SPEED_MBPS`: Your upload speed in Mbps, used to calculate estimated transfer times.
+- `TIMEZONE`: Set this to your desired timezone (e.g., "America/New_York", "Europe/London", "Asia/Tokyo").
+  You can find a list of valid timezone names [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ## Troubleshooting
 
