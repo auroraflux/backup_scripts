@@ -1,4 +1,4 @@
-# Docker Config Backup Script
+# Docker Config Backup Script (w/ Telegram Notifs!)
 
 This Bash script automates the process of backing up Docker configuration files and as an emphasis on sending beautiful, simple notifications via Telegram. It's designed to be customizable and easy to use, with options for simulating backups before running them for real.
 
